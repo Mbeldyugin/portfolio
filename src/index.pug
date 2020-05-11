@@ -35,31 +35,61 @@ html(lang="en")
                 .user-data__name Бельдюгин Максим  
 
             a(href="#").hero__bottom-btn.scroll-down-btn Скролл
-        //- section.about
-        //-   .container
-        //-     .about
-        //-       .about__user-data
-        //-         .user-info
-        //-           .user-info__avatar
-        //-             .avatar
-        //-               +image('content/user.jpg', 'avatar__img')
-                //- .user-info__content
-              //-     -
-              //-       var userdata = [
-              //-           ['Проживаю:', 'Петропавловск-Камчатский'],
-              //-           ['Возраст:', '34 года'],
-              //-           ['Родился:', '9 декабря 1985']
-              //-         ];
-              //-       table.user-info__data
-              //-         tbody.user-info__data-body
-              //-           each row in userdata 
-              //-             tr
-              //-               td #{row[0]}
-              //-               td #{row[1]}
-              //- .about__content
-
-
-      //- .maincontent
-      //-   +image('content/user.jpg', 'user-pic')
-      //-   +icon('link', 'link-class')
-      //-   .icon-bg
+        section.about-section
+          .container
+            .about
+              .about__user-data
+                .user-info
+                  .user-info__avatar
+                    .avatar
+                      +image('content/user.jpg', 'avatar__img')
+                .user-info__content
+                  -
+                    var userdata = [
+                        ['Проживаю:', 'Петропавловск-Камчатский'],
+                        ['Возраст:', '34 года'],
+                        ['Родился:', '9 декабря 1985']
+                      ];
+                  table.user-info__data
+                    tbody.user-info__data-body
+                      each row in userdata 
+                        tr
+                          td #{row[0]}
+                          td #{row[1]}
+              .about__content
+                .about__disclamer Привет, меня зоут
+                h2.about__title Максим Бельдюгин
+                .about__desc
+                  p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                .aboute__ps
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        section.values-section
+          section.triangles.values-section__triangles
+            svg(viewbox="0 0 1000 100" preserveAspectRatio='none').triangles__item.triangle
+              polygon(points="0,0 0,100 1000,100")
+            svg(viewbox="0 0 1000 100" preserveAspectRatio='none').triangles__item.triangle
+              polygon(points="1000,0 1000,100 0,100")
+          .values-section__title
+            .values-section__title-content
+              .longtitle
+                h2.longtitle__text Чем я могу быть валезен вам
+                .longtitle__desc
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quasi inventore maxime consequuntur deserunt reprehenderit dignissimos asperiores veritatis iusto ex, quaerat unde impedit beatae itaque quidem excepturi iure error voluptatum?
+          .values-section__content
+            -
+              var items = [
+                ['Front-end', ['HTML', 'CSS', 'javascript', 'jQuery и Vue.js']],
+                ['Workflow', ['GIT','Terminal', 'Gulp', 'Webpack']],
+              ];
+            ul.skills-list
+              each row in items
+                li.skills-list__item.skills-row
+                  .skills-row__title #{row[0]}
+                  ul.skills-row__list
+                    each cell in row[1]
+                      li.skills-row__item
+                        .skill
+                          .skill__circle
+                          .skill__circle
+                          .skill__title= cell
