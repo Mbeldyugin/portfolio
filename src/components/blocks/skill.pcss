@@ -1,0 +1,20 @@
+.skill {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+      
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+    
+    circle:last-child {
+      transform: rotate(180deg);
+      transform-origin: 50% 50%;
+    }
+  }

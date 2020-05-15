@@ -1,9 +1,50 @@
-.values-section {
+.values {
     position: relative;
-}
-.values-section__triangles {
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    left: 0;
+
+    &__triangles {
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        left: 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__inner {
+        position: relative;
+        width: 100%;
+
+        @media (min-width: 978px) {
+            max-width: 977px;
+            min-height: 630px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 20px;
+        @media (min-width: 978px) {
+            max-width: 630px;
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        position: static;
+        @media (min-width: 978px) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-75%, -50%);
+        }
+    }
+
+
+
+
+
 }
