@@ -104,13 +104,49 @@ html(lang="en")
                               linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
                                 stop(offset="0%" stop-color='#4a00ed')
                                 stop(offset="100%" stop-color='#9300e8')
-                            
-
-
-                              //- .skill__circle
-                              //- .skill__circle
             .values__image
               img(src="../src/images/content/backpack.png", alt="backpack")  
+      section.works
+        section.triangles.works__triangles
+        .container
+          .works__inner
+            h2.works__title Мои Работы
+            .works__content
+              .works__slider
+                .big-preview
+                  img(src="#", alt="preview").big-preview__img
+                .small-previews
+                  -
+                    var previewworks = ['1','2','3','4'];
+                  ul.previews__list
+                    each cell in previewworks
+                      li.previewworks__item
+                        button
+                          img(src="#", alt="small-preview").small-preview__img
+                .works__slider-btns
+                  ul.updown-btns
+                    li.updown-btns__item
+                      svg().up-btn
+                    li.updown-btns__item
+                      svg().down-btn  
+              .works__desc
+                .works__technologies
+                  - 
+                    var technologies = ['HTML', 'CSS', 'Javaskript'];
+                  ul.technologies-list
+                    each cell in technologies
+                      li.technologies__item
+                .works__desk-content
+                  h2.works__desk-title
+                  p.work__desk-text
+                  .work-desk-link
+                    .link__works
+                      a(href="#").link
+              .works__number
+                .bignumber
+
+
+
 
 
 
