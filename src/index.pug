@@ -113,29 +113,31 @@ html(lang="en")
             h2.works__title Мои Работы
             .works__content
               .works__slider
-                .big-preview
+                .works-slider__preview
                   img(src="#", alt="preview").big-preview__img
-                .small-previews
+                .works-slider__thumbs
                   -
                     var previewworks = ['1','2','3','4'];
-                  ul.previews__list
+                  ul.thumbs__list
                     each cell in previewworks
                       li.previewworks__item
                         button
                           img(src="#", alt="small-preview").small-preview__img
                 .works__slider-btns
-                  ul.updown-btns
-                    li.updown-btns__item
-                      svg().up-btn
-                    li.updown-btns__item
-                      svg().down-btn  
+                  ul.controls__list
+                    li.controls__item
+                      button.controls__btns
+                        svg().controls__icon.controls__icon--up
+                    li.controls__item
+                      button.controls__btns
+                        svg().controls__icon.controls__icon--down
               .works__desc
-                .works__technologies
+                .works-desc__tags
                   - 
                     var technologies = ['HTML', 'CSS', 'Javaskript'];
-                  ul.technologies-list
+                  ul.tags__list
                     each cell in technologies
-                      li.technologies__item
+                      li.tags__item
                 .works__desk-content
                   h2.works__desk-title
                   p.work__desk-text
