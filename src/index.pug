@@ -119,10 +119,14 @@ html(lang="en")
                   ul.controls__list
                     li.controls__item
                       button.controls__btns
-                        svg().controls__icon.controls__icon--up
+                        svg(width="50" hight="50" xmlns="http://www.w3.org/2000/svg").controls__icon.controls__icon--up
+                          line(x1="18" y1="34" x2="25" y2="26" stroke="white" stroke-width="3")
+                          line(x1="32" y1="34" x2="25" y2="26" stroke="white" stroke-width="3")
                     li.controls__item
                       button.controls__btns
-                        svg().controls__icon.controls__icon--down
+                        svg(width="50" hight="50" xmlns="http://www.w3.org/2000/svg").controls__icon.controls__icon--down
+                          line(x1="18" y1="26" x2="25" y2="34" stroke="white" stroke-width="3")
+                          line(x1="32" y1="26" x2="25" y2="34" stroke="white" stroke-width="3")
                 .works-slider__thumbs
                   .ul.thumbs__list
                     - for (var i = 1; i <= 4; i++)
