@@ -64,7 +64,7 @@ html(lang="en")
                             td #{row[1]}
                 .about__content
                   .about__disclamer Привет, меня зоут
-                  h2.about__title Максим Бельдюгин
+                  h2.about__title.title-section Максим Бельдюгин
                   .about__desc
                     p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                     p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
@@ -80,7 +80,7 @@ html(lang="en")
           .values__inner
             .values__content
               .values__header
-                h2.values__title Чем я могу быть палезен вам
+                h3.values__title.title-small Чем я могу быть палезен вам
                 span.values__subtitle Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
               .values-skills
                 -
@@ -110,19 +110,23 @@ html(lang="en")
         section.triangles.works__triangles
         .container
           .works__inner
-            h2.works__title Мои Работы
+            h2.works__title.title-section Мои Работы
             .works__content
               .works__slider
                 .works-slider__preview
-                  img(src="#", alt="preview").preview__img
+                  img(src="../src/images/content/preview1.png", alt="preview").preview__img
                 .works-slider__thumbs
                   -
-                    var previewworks = [,,,,]
+                    var previewworks = [
+                      "../src/images/content/thumbn1.png",
+                      "../src/images/content/thumbn2.png",
+                      "../src/images/content/thumbn3.png",
+                      "../src/images/content/thumbn4.png"];
                   ul.thumbs__list
                     each cell in previewworks
-                      li.thumbs-list__item
-                        button
-                          img(src="#", alt="small-preview").thumbs__img
+                      li.thumbs-list__item 
+                        button.thumbs-item__button
+                          img(src= cell, alt="small-preview").thumbs__img
                 .works__slider-btns
                   ul.controls__list
                     li.controls__item
@@ -131,21 +135,23 @@ html(lang="en")
                     li.controls__item
                       button.controls__btns
                         svg().controls__icon.controls__icon--down
-              .works__desc
-                .works-desc__tags
-                  - 
-                    var workteg = ['HTML', 'CSS', 'Javaskript'];
-                  ul.tags__list
-                    each cell in workteg
-                      li.tags__item
-                .works__desk-content
-                  h2.works__desk-title
-                  p.work__desk-text
-                  .work-desk-link
-                    .link__works
-                      a(href="#").link
-              .works__number
-                .bignumber 
+                .works__number
+                  .bignumber 4 
+              .works__desc-slider
+                .works__desc
+                  .works-desc__tags
+                    - 
+                      var workteg = ['HTML', 'CSS', 'Javaskript'];
+                    ul.tags__list
+                      each cell in workteg
+                        li.tags__item= cell
+                  .works__desk-content
+                    h2.works__desk-title.title-small Сайт школы образования
+                    p.work__desk-text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .work-desk-link
+                      .link__works
+                        a(href="#").link Посмотреть сайт
+              
                 
                 
 
