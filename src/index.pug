@@ -115,18 +115,6 @@ html(lang="en")
               .works__slider
                 .works-slider__preview
                   img(src="../src/images/content/preview1.png", alt="preview").preview__img
-                .works-slider__thumbs
-                  -
-                    var previewworks = [
-                      "../src/images/content/thumbn1.png",
-                      "../src/images/content/thumbn2.png",
-                      "../src/images/content/thumbn3.png",
-                      "../src/images/content/thumbn4.png"];
-                  ul.thumbs__list
-                    each cell in previewworks
-                      li.thumbs-list__item 
-                        button.thumbs-item__button
-                          img(src= cell, alt="small-preview").thumbs__img
                 .works__slider-btns
                   ul.controls__list
                     li.controls__item
@@ -135,6 +123,23 @@ html(lang="en")
                     li.controls__item
                       button.controls__btns
                         svg().controls__icon.controls__icon--down
+                .works-slider__thumbs
+                  .ul.thumbs__list
+                    - for (var i = 1; i <= 4; i++)
+                      li(class=`thumbs-list__item ${i === 4 ? "thumbs-list__item--active" : ""}`)
+                        button.thumbs-item__button
+                          +image(`content/thumbn${i}.png`, thumbs__img)
+                  //- -
+                  //-   var previewworks = [
+                  //-     "../src/images/content/thumbn1.png",
+                  //-     "../src/images/content/thumbn2.png",
+                  //-     "../src/images/content/thumbn3.png",
+                  //-     "../src/images/content/thumbn4.png"];
+                  //- ul.thumbs__list
+                    //- each cell in previewworks
+                      li.thumbs-list__item 
+                        button.thumbs-item__button
+                          img(src= cell, alt="small-preview").thumbs__img
                 .works__number
                   .bignumber 4 
               .works__desc-slider
