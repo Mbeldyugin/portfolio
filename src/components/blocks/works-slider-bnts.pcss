@@ -20,4 +20,17 @@
 .controls__icon {
     width: 51px;
     height: 51px;
+    stroke: #5d6470;
+    opacity: 0.302;
+    &:hover {
+        opacity: 1;
+        // stroke: white;  
+    }
+    &--active {
+        opacity: 1;
+    }
+    &--down {
+        transform-origin: 50% 57%;
+        transform: rotate(180deg);
+    }
 }

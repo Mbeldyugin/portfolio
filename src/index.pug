@@ -108,6 +108,10 @@ html(lang="en")
               img(src="../src/images/content/backpack.png", alt="backpack")  
       section.works
         section.triangles.works__triangles
+          svg(viewbox="0 0 1000 100" preserveAspectRatio='none').triangles__item.triangle
+            polygon(points="0,0 0,100 1000,100")
+          svg(viewbox="0 0 1000 100" preserveAspectRatio='none').triangles__item.triangle
+            polygon(points="1000,0 1000,100 0,100")
         .container
           .works__inner
             h2.works__title.title-section Мои Работы
@@ -119,14 +123,12 @@ html(lang="en")
                   ul.controls__list
                     li.controls__item
                       button.controls__btns
-                        svg(width="50" hight="50" xmlns="http://www.w3.org/2000/svg").controls__icon.controls__icon--up
-                          line(x1="18" y1="34" x2="25" y2="26" stroke="white" stroke-width="3")
-                          line(x1="32" y1="34" x2="25" y2="26" stroke="white" stroke-width="3")
+                        svg(width="50" hight="50" xmlns="http://www.w3.org/2000/svg").controls__icon.controls__icon--active
+                          path(d="M18,34 L25,26 L32,34" stroke="white" stroke-width="3" fill="transparent")
                     li.controls__item
                       button.controls__btns
                         svg(width="50" hight="50" xmlns="http://www.w3.org/2000/svg").controls__icon.controls__icon--down
-                          line(x1="18" y1="26" x2="25" y2="34" stroke="white" stroke-width="3")
-                          line(x1="32" y1="26" x2="25" y2="34" stroke="white" stroke-width="3")
+                          path(d="M18,34 L25,26 L32,34" stroke="white" stroke-width="3" fill="transparent")
                 .works-slider__thumbs
                   .ul.thumbs__list
                     - for (var i = 1; i <= 4; i++)
@@ -153,13 +155,19 @@ html(lang="en")
                       var workteg = ['HTML', 'CSS', 'Javaskript'];
                     ul.tags__list
                       each cell in workteg
-                        li.tags__item= cell
+                        .tags__block
+                          li.tags__item= cell
                   .works__desk-content
                     h2.works__desk-title.title-small Сайт школы образования
                     p.work__desk-text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                     .work-desk-link
                       .link__works
-                        a(href="#").link Посмотреть сайт
+                        a(href="#").link-woks__site
+                          +icon("link" , "link-works__icon")
+                          .link-works__text Посмотреть сайт
+                          
+
+
               
                 
                 
