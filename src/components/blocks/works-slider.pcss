@@ -20,14 +20,46 @@
 }
 
 .thumbs-list__item {
+
+    width: 177px;
+    height: 102px;
+    
     
     &--active {
-        border-color: #dc9322;
-        border-style: solid;
-        border-radius: 3px;
-    }           
+        
+        //     border-color: #dc9322;
+        //     border-style: solid;
+        //     border-radius: 3px;
+        outline-width: 3px;
+        outline-color: #dc9322;
+        outline-style: solid;
+        
+        // border: 5px solid;
+        // border-radius: 3px;
+        // border-color: #dc9322;
+        
+    }
 }
 
 .thumbs-item__button {
     padding: 0;
+    width: 100%;
+    height: 100%;
+    outline-width: 0;
+    &:focus {
+        outline-width: 3px;
+        outline-color: #dc9322;
+        outline-style: solid;
+    }
+}
+
+.thumbs__img {
+    height: 100%;
+    width: 100%;
+    // outline-width: 0;
+    &:focus {
+        outline-width: 3px;
+        outline-color: #dc9322;
+        outline-style: solid;
+    }
 }

@@ -107,11 +107,6 @@ html(lang="en")
             .values__image
               img(src="../src/images/content/backpack.png", alt="backpack")  
       section.works
-        section.triangles.works__triangles
-          svg(viewbox="0 0 1000 100" preserveAspectRatio='none').triangles__item.triangle
-            polygon(points="0,0 0,100 1000,100")
-          svg(viewbox="0 0 1000 100" preserveAspectRatio='none').triangles__item.triangle
-            polygon(points="1000,0 1000,100 0,100")
         .container
           .works__inner
             h2.works__title.title-section Мои Работы
@@ -134,7 +129,7 @@ html(lang="en")
                     - for (var i = 1; i <= 4; i++)
                       li(class=`thumbs-list__item ${i === 4 ? "thumbs-list__item--active" : ""}`)
                         button.thumbs-item__button
-                          +image(`content/thumbn${i}.png`, thumbs__img)
+                          +image(`content/thumbn${i}.png`, 'thumbs__img')
                   //- -
                   //-   var previewworks = [
                   //-     "../src/images/content/thumbn1.png",
@@ -165,7 +160,15 @@ html(lang="en")
                         a(href="#").link-woks__site
                           +icon("link" , "link-works__icon")
                           .link-works__text Посмотреть сайт
-                          
+      div.comments-feet
+        +image('content/buddacompressed.png', 'comments-feet__background')
+        section.comments
+          section.triangles.comments__triangles
+            svg(viewbox="0 0 1000 100" preserveAspectRatio='none').triangles__item.triangle
+              polygon(points="0,0 500,100 1000,0")
+        section.feetback
+
+
 
 
               
